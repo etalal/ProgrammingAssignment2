@@ -1,7 +1,13 @@
-## Put comments here that give an overall description of what your
-## functions do
+##To avoid repetitive complex computation we can cache the value of the computation.the following functions will
+##return the inverse of a mtrix from cached data by taking advantage of lexical scoping and in case the inverse 
+##is not available from cached data they will compute the inverse of the matrix.
 
-## Write a short comment describing this function
+
+## MakeCacheMatrix function will return a list of functions to -
+## 1. set the value of the matrix
+## 2. get the value of the matrix
+## 3. set the value of the inverse of the matrix
+## 4. get the value of the inverse of the matrix
 
 makeCacheMatrix <- function(x = matrix()) {
   inv <- NULL
@@ -16,7 +22,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## cacheSolve function will try to get the inverse of a mtrix from the cached data.
+## the function will compute the inverse of the matrix in case cached value is not available
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
